@@ -217,10 +217,14 @@ void loop()
         M5.Lcd.println("Hola mundo, el mundo!,es-ES");
         google_tts("Hola mundo, el mundo!","es-ES");
         break;
+      case 6:
+        M5.Lcd.println("你好，世界!,cmn-CN");
+        google_tts("你好，世界!","cmn-CN");
+        break;
       defalt:
         google_tts("こんにちは、世界！", "ja");
     }
-    if(counter > 5) counter = 0;
+    if(counter > 6) counter = 0;
   }
   if(mp3->isRunning()) {
     while (mp3->loop()){
